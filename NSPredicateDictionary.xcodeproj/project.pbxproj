@@ -46,6 +46,9 @@
 		1BBA14EA195A0386006E76F8 /* NSPredicate+DictionaryRepresentation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSPredicate+DictionaryRepresentation.m"; sourceTree = "<group>"; };
 		1BBA14F0195A081A006E76F8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		1BBA14F2195A0C99006E76F8 /* Tests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Tests.xcconfig; sourceTree = "<group>"; };
+		1BBA14F3195A143C006E76F8 /* QUELLRestServicePredicate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QUELLRestServicePredicate.h; sourceTree = "<group>"; };
+		1BBA14F4195A143C006E76F8 /* QUELLRestServicePredicate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QUELLRestServicePredicate.m; sourceTree = "<group>"; };
+		1BBA14F9195A1C66006E76F8 /* QUELLRestServicePredicateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QUELLRestServicePredicateTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +82,7 @@
 				1BBA14F2195A0C99006E76F8 /* Tests.xcconfig */,
 				1BBA14E7195A0274006E76F8 /* Warnings.xcconfig */,
 				1BBA14C3195A024C006E76F8 /* NSPredicateDictionary */,
+				1BBA14F7195A185A006E76F8 /* HTTP Example */,
 				1BBA14D7195A024C006E76F8 /* NSPredicateDictionaryTests */,
 				1BBA14C0195A024C006E76F8 /* Frameworks */,
 				1BBA14BF195A024C006E76F8 /* Products */,
@@ -147,6 +151,17 @@
 				1BBA14EA195A0386006E76F8 /* NSPredicate+DictionaryRepresentation.m */,
 			);
 			name = Foundation;
+			sourceTree = "<group>";
+		};
+		1BBA14F7195A185A006E76F8 /* HTTP Example */ = {
+			isa = PBXGroup;
+			children = (
+				1BBA14F3195A143C006E76F8 /* QUELLRestServicePredicate.h */,
+				1BBA14F4195A143C006E76F8 /* QUELLRestServicePredicate.m */,
+				1BBA14F9195A1C66006E76F8 /* QUELLRestServicePredicateTests.m */,
+			);
+			name = "HTTP Example";
+			path = NSPredicateDictionary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
