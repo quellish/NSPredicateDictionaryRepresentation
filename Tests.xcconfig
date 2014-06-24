@@ -1,0 +1,14 @@
+//
+//  Tests.xcconfig
+//  NSPredicateDictionary
+//
+//  Created by Dan Zinngrabe on 6/24/14.
+//  Copyright (c) 2014 Dan Zinngrabe. All rights reserved.
+//
+
+OTHER_LDFLAGS = $(inherited) -all_load -ObjC
+
+#include "Warnings.xcconfig"
+
+// Set pedantic warnings off for tests, this prevents an error on XCTTestAssertionsImpl.h with "Named varidic macros are a GNU extension"
+GCC_WARN_PEDANTIC = NO;

@@ -8,14 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		1BBA14C2195A024C006E76F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBA14C1195A024C006E76F8 /* Foundation.framework */; };
-		1BBA14C7195A024C006E76F8 /* NSPredicateDictionary.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1BBA14C6195A024C006E76F8 /* NSPredicateDictionary.h */; };
-		1BBA14C9195A024C006E76F8 /* NSPredicateDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BBA14C8195A024C006E76F8 /* NSPredicateDictionary.m */; };
 		1BBA14D0195A024C006E76F8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBA14CF195A024C006E76F8 /* XCTest.framework */; };
 		1BBA14D1195A024C006E76F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBA14C1195A024C006E76F8 /* Foundation.framework */; };
 		1BBA14D3195A024C006E76F8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBA14D2195A024C006E76F8 /* UIKit.framework */; };
 		1BBA14D6195A024C006E76F8 /* libNSPredicateDictionary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBA14BE195A024C006E76F8 /* libNSPredicateDictionary.a */; };
 		1BBA14DC195A024C006E76F8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1BBA14DA195A024C006E76F8 /* InfoPlist.strings */; };
 		1BBA14DE195A024C006E76F8 /* NSPredicateDictionaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BBA14DD195A024C006E76F8 /* NSPredicateDictionaryTests.m */; };
+		1BBA14EB195A0386006E76F8 /* NSPredicate+DictionaryRepresentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BBA14EA195A0386006E76F8 /* NSPredicate+DictionaryRepresentation.m */; };
+		1BBA14EE195A0802006E76F8 /* NSPredicateDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BBA14C6195A024C006E76F8 /* NSPredicateDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1BBA14F1195A0C5F006E76F8 /* NSPredicate+DictionaryRepresentation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BBA14E9195A0386006E76F8 /* NSPredicate+DictionaryRepresentation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,31 +29,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		1BBA14BC195A024C006E76F8 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-				1BBA14C7195A024C006E76F8 /* NSPredicateDictionary.h in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		1BBA14BE195A024C006E76F8 /* libNSPredicateDictionary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNSPredicateDictionary.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BBA14C1195A024C006E76F8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1BBA14C5195A024C006E76F8 /* NSPredicateDictionary-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSPredicateDictionary-Prefix.pch"; sourceTree = "<group>"; };
 		1BBA14C6195A024C006E76F8 /* NSPredicateDictionary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSPredicateDictionary.h; sourceTree = "<group>"; };
-		1BBA14C8195A024C006E76F8 /* NSPredicateDictionary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSPredicateDictionary.m; sourceTree = "<group>"; };
 		1BBA14CE195A024C006E76F8 /* NSPredicateDictionaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSPredicateDictionaryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BBA14CF195A024C006E76F8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		1BBA14D2195A024C006E76F8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		1BBA14D9195A024C006E76F8 /* NSPredicateDictionaryTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSPredicateDictionaryTests-Info.plist"; sourceTree = "<group>"; };
 		1BBA14DB195A024C006E76F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1BBA14DD195A024C006E76F8 /* NSPredicateDictionaryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSPredicateDictionaryTests.m; sourceTree = "<group>"; };
+		1BBA14E7195A0274006E76F8 /* Warnings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Warnings.xcconfig; sourceTree = "<group>"; };
+		1BBA14E8195A0280006E76F8 /* StaticLibrary.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = StaticLibrary.xcconfig; sourceTree = "<group>"; };
+		1BBA14E9195A0386006E76F8 /* NSPredicate+DictionaryRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSPredicate+DictionaryRepresentation.h"; sourceTree = "<group>"; };
+		1BBA14EA195A0386006E76F8 /* NSPredicate+DictionaryRepresentation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSPredicate+DictionaryRepresentation.m"; sourceTree = "<group>"; };
+		1BBA14F0195A081A006E76F8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		1BBA14F2195A0C99006E76F8 /* Tests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Tests.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +74,10 @@
 		1BBA14B5195A024C006E76F8 = {
 			isa = PBXGroup;
 			children = (
+				1BBA14F0195A081A006E76F8 /* README.md */,
+				1BBA14E8195A0280006E76F8 /* StaticLibrary.xcconfig */,
+				1BBA14F2195A0C99006E76F8 /* Tests.xcconfig */,
+				1BBA14E7195A0274006E76F8 /* Warnings.xcconfig */,
 				1BBA14C3195A024C006E76F8 /* NSPredicateDictionary */,
 				1BBA14D7195A024C006E76F8 /* NSPredicateDictionaryTests */,
 				1BBA14C0195A024C006E76F8 /* Frameworks */,
@@ -111,7 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				1BBA14C6195A024C006E76F8 /* NSPredicateDictionary.h */,
-				1BBA14C8195A024C006E76F8 /* NSPredicateDictionary.m */,
+				1BBA14EC195A038D006E76F8 /* Foundation */,
 				1BBA14C4195A024C006E76F8 /* Supporting Files */,
 			);
 			path = NSPredicateDictionary;
@@ -143,7 +140,28 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		1BBA14EC195A038D006E76F8 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				1BBA14E9195A0386006E76F8 /* NSPredicate+DictionaryRepresentation.h */,
+				1BBA14EA195A0386006E76F8 /* NSPredicate+DictionaryRepresentation.m */,
+			);
+			name = Foundation;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1BBA14ED195A07FC006E76F8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BBA14EE195A0802006E76F8 /* NSPredicateDictionary.h in Headers */,
+				1BBA14F1195A0C5F006E76F8 /* NSPredicate+DictionaryRepresentation.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		1BBA14BD195A024C006E76F8 /* NSPredicateDictionary */ = {
@@ -152,7 +170,7 @@
 			buildPhases = (
 				1BBA14BA195A024C006E76F8 /* Sources */,
 				1BBA14BB195A024C006E76F8 /* Frameworks */,
-				1BBA14BC195A024C006E76F8 /* CopyFiles */,
+				1BBA14ED195A07FC006E76F8 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -224,7 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BBA14C9195A024C006E76F8 /* NSPredicateDictionary.m in Sources */,
+				1BBA14EB195A0386006E76F8 /* NSPredicate+DictionaryRepresentation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,30 +346,31 @@
 		};
 		1BBA14E2195A024C006E76F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BBA14E8195A0280006E76F8 /* StaticLibrary.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/NSPredicateDictionary.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSPredicateDictionary/NSPredicateDictionary-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
 		1BBA14E3195A024C006E76F8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BBA14E8195A0280006E76F8 /* StaticLibrary.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/NSPredicateDictionary.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSPredicateDictionary/NSPredicateDictionary-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
 		1BBA14E5195A024C006E76F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BBA14F2195A0C99006E76F8 /* Tests.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -372,6 +391,7 @@
 		};
 		1BBA14E6195A024C006E76F8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BBA14F2195A0C99006E76F8 /* Tests.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
