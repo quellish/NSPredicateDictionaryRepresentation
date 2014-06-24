@@ -14,3 +14,8 @@ See [Technical Q&A QA1490](https://developer.apple.com/library/ios/qa/qa1490/_in
 
 
 ###Customizing behavior
+See the included HTTP REST service sample code, QUELLRestServicePredicate.
+
+###What's with the funny method names?
+
+This functionality is implemented as an informal protocol on the Foundation NSPredicate classes. [Apple requests that when extending Foundation classes a prefix should be added.](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/CustomizingExistingClasses/CustomizingExistingClasses.html)
