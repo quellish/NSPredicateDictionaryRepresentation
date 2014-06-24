@@ -33,7 +33,7 @@
 {
     NSPredicate     *predicate      = [QUELLRestServicePredicate predicateForLinksWithTag:@"foo"];
     
-    XCTAssertThrows([predicate dictionaryRepresentation], @"Did not throw exception");
+    XCTAssertThrows([predicate quell_dictionaryRepresentation], @"Did not throw exception");
 }
 
 // Implement additional tests that verify the resulting dictionary contains the expected information, etc.

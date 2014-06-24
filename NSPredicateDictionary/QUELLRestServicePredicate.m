@@ -10,11 +10,11 @@
 #import "NSPredicate+DictionaryRepresentation.h"
 
 @interface QUELLRestCompoundPredicate : NSCompoundPredicate
-- (NSDictionary *) dictionaryRepresentation;
+- (NSDictionary *) quell_dictionaryRepresentation;
 @end
 
 @interface QUELLRestComparisonPredicate : NSComparisonPredicate
-- (NSDictionary *) dictionaryRepresentation;
+- (NSDictionary *) QUELL_dictionaryRepresentation;
 @end
 
 #pragma mark -
@@ -28,7 +28,7 @@
  *
  */
 
-- (NSDictionary *) dictionaryRepresentation {
+- (NSDictionary *) QUELL_dictionaryRepresentation {
 	NSDictionary        *result             = @{};
     
     if ([self compoundPredicateType] == NSAndPredicateType){
@@ -50,15 +50,15 @@
  *
  */
 
-- (NSString *) localizedNotDescription {
+- (NSString *) QUELL_localizedNotDescription {
     return @"";
 }
 
-- (NSString *) localizedOrDescription {
+- (NSString *) QUELL_localizedOrDescription {
     return @"";
 }
 
-- (NSString *) localizedAndDescription {
+- (NSString *) QUELL_localizedAndDescription {
     return @"";
 }
 
@@ -73,7 +73,7 @@
  *
  */
 
-- (NSDictionary *) dictionaryRepresentation {
+- (NSDictionary *) QUELL_dictionaryRepresentation {
 	NSDictionary        *result             = @{};
     
 	if ([self predicateOperatorType] == NSEqualToPredicateOperatorType){

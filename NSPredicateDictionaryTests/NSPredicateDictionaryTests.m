@@ -32,7 +32,7 @@
 - (void)testCompoundPredicateNotNil
 {
     NSCompoundPredicate *orMatchPredicates = (NSCompoundPredicate *)[NSCompoundPredicate orPredicateWithSubpredicates:nil];
-    XCTAssertNotNil([orMatchPredicates dictionaryRepresentation], @"Compound predicate has no result");
+    XCTAssertNotNil([orMatchPredicates quell_dictionaryRepresentation], @"Compound predicate has no result");
 }
 
 /**
@@ -46,8 +46,7 @@
     NSComparisonPredicate *comparisonPredicate = (NSComparisonPredicate *)[NSComparisonPredicate predicateWithLeftExpression:lhs rightExpression:rhs modifier:NSDirectPredicateModifier
                                                                                                                         type:NSContainsPredicateOperatorType
                                                                                                                      options:NSCaseInsensitivePredicateOption];
-    //XCTAssertNotNil([comparisonPredicate dictionaryRepresentation], @"Comparison predicate has no result");
-    XCTAssertThrows([comparisonPredicate dictionaryRepresentation], @"Should throw exception");
+    XCTAssertThrows([comparisonPredicate quell_dictionaryRepresentation], @"Should throw exception");
 }
 
 /**
@@ -63,7 +62,7 @@
                                                                                                                      options:NSCaseInsensitivePredicateOption];
     // Test an example of a predicate that SHOULD throw an exception, one we could not support
     // such as one with a function or block, predicates using MATCHES, etc.
-    XCTAssertThrows([comparisonPredicate dictionaryRepresentation], @"Should not be able to construct this expression");
+    XCTAssertThrows([comparisonPredicate quell_dictionaryRepresentation], @"Should not be able to construct this expression");
 }
 
 /**
@@ -75,7 +74,7 @@
     NSPredicate *predicate = [[NSPredicate alloc] init];
     // Test an example of a predicate that SHOULD throw an exception, one we could not support
     // such as one with a function or block, predicates using MATCHES, etc.
-    XCTAssertNotNil([predicate dictionaryRepresentation], @"Should be non nil, but empty");
+    XCTAssertNotNil([predicate quell_dictionaryRepresentation], @"Should be non nil, but empty");
 }
 
 /**
@@ -85,7 +84,7 @@
 - (void)testBasePredicateEmpty
 {
     NSPredicate *predicate = [[NSPredicate alloc] init];
-    XCTAssertTrue([[predicate dictionaryRepresentation] count] == 0, @"Should be non nil, but empty");
+    XCTAssertTrue([[predicate quell_dictionaryRepresentation] count] == 0, @"Should be non nil, but empty");
 }
 
 /**
@@ -101,7 +100,7 @@
     // Does the generated predicate dictionary equal the expected result?
     //result = [predicate dictionaryRepresentation];
     //XCTAssertTrue([result isEqual:expectation], @"Did not get expected result. Expected:%@ Got:%@", expectation, result);
-    XCTAssertThrows([predicate dictionaryRepresentation], @"Should throw exception");
+    XCTAssertThrows([predicate quell_dictionaryRepresentation], @"Should throw exception");
 }
 
 /**
@@ -112,7 +111,7 @@
 {
     NSPredicate     *predicate      = [NSPredicate predicateWithFormat:@"foo != nil AND bar != nil"];
     
-    XCTAssertThrows([predicate dictionaryRepresentation], @"Did not throw exception");
+    XCTAssertThrows([predicate quell_dictionaryRepresentation], @"Did not throw exception");
 }
 
 /**
@@ -123,7 +122,7 @@
 {
     NSPredicate     *predicate      = [NSPredicate predicateWithFormat:@"foo != nil AND bar != nil"];
     
-    XCTAssertThrows([predicate dictionaryRepresentation], @"Did not throw exception");
+    XCTAssertThrows([predicate quell_dictionaryRepresentation], @"Did not throw exception");
 }
 
 /**
@@ -134,7 +133,7 @@
 {
     NSPredicate     *predicate      = [NSPredicate predicateWithFormat:@"foo != nil OR bar != nil"];
     
-    XCTAssertThrows([predicate dictionaryRepresentation], @"Did not throw exception");
+    XCTAssertThrows([predicate quell_dictionaryRepresentation], @"Did not throw exception");
 }
 
 /**
@@ -145,7 +144,7 @@
 {
     NSPredicate     *predicate      = [NSPredicate predicateWithFormat:@"foo != nil AND NOT bar != nil"];
     
-    XCTAssertThrows([predicate dictionaryRepresentation], @"Did not throw exception");
+    XCTAssertThrows([predicate quell_dictionaryRepresentation], @"Did not throw exception");
 }
 
 /**
@@ -156,7 +155,7 @@
 {
     NSPredicate     *predicate      = [NSPredicate predicateWithFormat:@"foo CONTAINS 'bar'"];
     
-    XCTAssertThrows([predicate dictionaryRepresentation], @"Did not throw exception");
+    XCTAssertThrows([predicate quell_dictionaryRepresentation], @"Did not throw exception");
 }
 
 /**
@@ -167,7 +166,7 @@
 {
     NSPredicate     *predicate      = [NSPredicate predicateWithFormat:@"foo == bar"];
     
-    XCTAssertThrows([predicate dictionaryRepresentation], @"Did not throw exception");
+    XCTAssertThrows([predicate quell_dictionaryRepresentation], @"Did not throw exception");
 }
 
 /**
@@ -178,7 +177,7 @@
 {
     NSPredicate     *predicate      = [NSPredicate predicateWithFormat:@"foo != bar"];
     
-    XCTAssertThrows([predicate dictionaryRepresentation], @"Did not throw exception");
+    XCTAssertThrows([predicate quell_dictionaryRepresentation], @"Did not throw exception");
 }
 
 @end

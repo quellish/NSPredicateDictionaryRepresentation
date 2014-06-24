@@ -10,7 +10,7 @@
 
 @implementation NSExpression (StringValue)
 
-- (NSString *)stringValue {
+- (NSString *)quell_stringValue {
 	NSString	*result	= nil;
 	switch([self expressionType]){
 		case NSConstantValueExpressionType:
@@ -41,7 +41,7 @@
 
 @implementation NSPredicate (Dictionary)
 
-- (NSDictionary *)dictionaryRepresentation {
+- (NSDictionary *)quell_dictionaryRepresentation {
 	NSDictionary	*result	= @{};
 	return result;
 }
@@ -57,7 +57,7 @@
  *  @return NSDictionary
  */
 
-- (NSDictionary *)dictionaryRepresentation __attribute__((ns_returns_autoreleased)) {
+- (NSDictionary *)quell_dictionaryRepresentation __attribute__((ns_returns_autoreleased)) {
     NSMutableDictionary *result             = nil;
     
     switch ([self predicateOperatorType]){
@@ -116,24 +116,24 @@
 
 @implementation NSCompoundPredicate (Dictionary)
 
-- (NSDictionary *)dictionaryRepresentation __attribute__((ns_returns_autoreleased)) {
+- (NSDictionary *)quell_dictionaryRepresentation __attribute__((ns_returns_autoreleased)) {
 	NSMutableDictionary	*result	= nil;
 
     result = [[NSMutableDictionary alloc] init];
     switch ([self compoundPredicateType]){
         case NSNotPredicateType:
             for (id predicate in [self subpredicates]){
-                [result setValue:[predicate dictionaryRepresentation] forKey:[self localizedNotDescription]];
+                [result setValue:[predicate quell_dictionaryRepresentation] forKey:[self quell_localizedNotDescription]];
             }
             break;
         case NSAndPredicateType:
             for (id predicate in [self subpredicates]){
-                [result setValue:[predicate dictionaryRepresentation] forKey:[self localizedAndDescription]];
+                [result setValue:[predicate quell_dictionaryRepresentation] forKey:[self localizedAndDescription]];
             }
             break;
         case NSOrPredicateType:
             for (id predicate in [self subpredicates]){
-                [result setValue:[predicate dictionaryRepresentation] forKey:[self localizedOrDescription]];
+                [result setValue:[predicate quell_dictionaryRepresentation] forKey:[self localizedOrDescription]];
             }
             break;
         default:
@@ -147,7 +147,7 @@
 }
 
 
-- (NSString *) localizedNotDescription {
+- (NSString *) quell_localizedNotDescription {
     return NSLocalizedString(@"localizedNOTDescription", @"NOT");
 }
 

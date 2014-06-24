@@ -29,7 +29,7 @@
  *  @return Dictionary
  */
 
-- (NSDictionary *)dictionaryRepresentation;
+- (NSDictionary *)quell_dictionaryRepresentation;
 
 @end
 #endif
